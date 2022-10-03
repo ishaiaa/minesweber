@@ -1,0 +1,11 @@
+.mainContainer {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(var(--gridSize), 1fr);
+    grid-template-rows: repeat(var(--gridSize), 1fr);
+    grid-gap: 5px;
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border-radius: 5px;
+}
