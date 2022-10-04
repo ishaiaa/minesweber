@@ -1,6 +1,6 @@
 .mainContainer {
     display: grid;
-    padding: 5px;
+    padding: 10px;
     grid-template-columns: repeat(var(--gridSize), 1fr);
     grid-template-rows: repeat(var(--gridSize), 1fr);
     grid-gap: 5px;

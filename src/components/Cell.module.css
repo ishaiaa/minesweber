@@ -1,9 +1,50 @@
 .mainContainer {
     width: 100%;
     height: 100%;
-    background-color: aqua;
+    background-color: rgba(99, 99, 99, 0.23);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
 }
 
-.mainContainer:hover {
-    background-color: aquamarine;
+.mainContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.0;
+}
+
+.hidden {
+    background-color:navajowhite;
+}
+
+.flag {
+    opacity: 1 !important;
+}
+
+.hidden > * {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.mainContainer:hover::after {
+    opacity: 0.4;
+}
+
+.mainContainer img {
+    width: 100%;
+    position: absolute;
+}
+
+.mainContainer p {
+    position: absolute;
+    font-weight: 900;
+
 }
