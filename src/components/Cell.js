@@ -22,6 +22,9 @@ function Cell(props) {
     if(props.reference.isFlagged) {
         content = <img className={styles.flag} src={flag} alt="flag"></img>
     }
+    else if(!props.reference.isRevealed) {
+        content = <div/>
+    }
     else if(props.reference.isBomb) {
         content = <img src={mine} alt="mine"></img>
     }

@@ -10,7 +10,7 @@ class GameManager {
         
             for(let x = 0; x < size; x++) {
                 let tempCell = new CellData(iterator, 0, false, false, false);
-                console.log(tempCell)
+                // console.log(tempCell)
                 tempRow.push(tempCell)
                 iterator++;
             }
@@ -52,8 +52,8 @@ class GameManager {
         let size = tempGrid.length;
         let pow = size * size;
         let ids = [...Array(pow).keys()]
-        console.log(ids)
-        console.log(ids.length)
+        // console.log(ids)
+        // console.log(ids.length)
 
         for(let i = 0; i < number; i++) {
             let index = Math.floor(Math.random() * ids.length);
@@ -64,9 +64,9 @@ class GameManager {
             let row = Math.floor(id/size);
             let col = id%size;
 
-            console.log(index)
-            console.log(row)
-            console.log(col)
+            // console.log(index)
+            // console.log(row)
+            // console.log(col)
 
 
             tempGrid[row][col].isBomb = true;

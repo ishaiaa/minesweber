@@ -4,8 +4,29 @@
     grid-template-columns: repeat(var(--gridSize), 1fr);
     grid-template-rows: repeat(var(--gridSize), 1fr);
     grid-gap: 5px;
-    width: 400px;
-    height: 400px;
-    background-color: beige;
+    width: 600px;
+    height: 600px;
+    background-color: var(--primaryColor);
     border-radius: 5px;
+    user-select: none;
+    position: relative;
+}
+
+.gameOver::after {
+    content: "Game Over";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.409);
 }

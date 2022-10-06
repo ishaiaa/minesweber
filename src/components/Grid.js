@@ -6,6 +6,8 @@ import GameManager from '../game/GameManager';
 
 function Grid(props) {
 
+    const gridSize = props.gridData.length;
+
     function handleCellClick(id) {
         props.cellClick(id);
     }
@@ -15,12 +17,14 @@ function Grid(props) {
     }
 
     return (
-        <div style={{'--gridSize': props.gridSize}} className={styles.mainContainer}>
+        <div 
+            style={{'--gridSize': gridSize}} 
+            className={`${styles.mainContainer} ${props.gameRunning ? "" : styles.gameOver}`}>
             {
                 props.gridData.map((test) => {
                     const list = test.map((object) => {
                         let id = object.id
-                        let size = props.gridSize
+                        let size = gridSize
                         let row = Math.floor(id/size);
                         let col = id%size
 

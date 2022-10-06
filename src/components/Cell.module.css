@@ -1,7 +1,7 @@
 .mainContainer {
     width: 100%;
     height: 100%;
-    background-color: rgba(99, 99, 99, 0.23);
+    background-color: transparent;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -17,12 +17,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: white;
     opacity: 0.0;
 }
 
 .hidden {
-    background-color:navajowhite;
+    background-color: rgba(255,255,255,0.05);
 }
 
 .flag {
@@ -35,7 +35,7 @@
 }
 
 .mainContainer:hover::after {
-    opacity: 0.4;
+    opacity: 0.1;
 }
 
 .mainContainer img {
